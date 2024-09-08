@@ -118,5 +118,11 @@
       "en": "English",
       "de": "Deutsch",
       "fr": "Français"
-    }
+    },
+    "accessLock": {
+        "title": "Access Required",
+        "placeholder": "Enter password",
+        "submit": "Submit",
+        "error": "Incorrect password. Please try again."
+      }
   }

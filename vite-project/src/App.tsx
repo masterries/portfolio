@@ -1,6 +1,9 @@
 import React, { ErrorInfo, ReactNode } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PortfolioPage from './component/PortfolioPage';
 import LanguageSwitcher from './component/LanguageSwitcher';
+import AllProjects from './component/AllProjects';
+import ProjectDetail from './component/ProjectDetail';
 
 class ErrorBoundary extends React.Component<{ children: ReactNode }, { hasError: boolean }> {
   constructor(props: { children: ReactNode }) {
@@ -28,10 +31,16 @@ class ErrorBoundary extends React.Component<{ children: ReactNode }, { hasError:
 const App: React.FC = () => {
   return (
     <ErrorBoundary>
-      <div className="App">
-        <LanguageSwitcher />
-        <PortfolioPage />
-      </div>
+      <Router>
+        <div className="App">
+          <LanguageSwitcher />
+          <Routes>
+            <Route path="/" element={<PortfolioPage />} />
+            <Route path="/projects" element={<AllProjects />} />
+            <Route path="/project/:id" element={<ProjectDetail />} />
+          </Routes>
+        </div>
+      </Router>
     </ErrorBoundary>
   );
 };

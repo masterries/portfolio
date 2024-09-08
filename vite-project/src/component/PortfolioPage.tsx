@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Github, Linkedin, Mail, Code, Database, Brain } from 'lucide-react';
-import Timeline from './timeline';
+import Draggable from 'react-draggable';
+import Timeline from './Timeline';
 import { useTranslation } from 'react-i18next';
+import AccessLock from './AccessLock';
+import AllProjects from './AllProjects';
+import { Link } from 'react-router-dom';
+import FourWinsGame from './FourWinsGame';
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -26,15 +31,22 @@ const LanguageSwitcher = () => {
   );
 };
 
-const PortfolioPage = () => {
+const PortfolioPage: React.FC = () => {
+  const [isUnlocked, setIsUnlocked] = useState(false);
   const { t } = useTranslation();
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
   const scale = useTransform(scrollYProgress, [0, 0.2], [0.8, 1]);
   
   const [visibleSection, setVisibleSection] = useState('intro');
+  const [showFourWins, setShowFourWins] = useState(false);
 
   useEffect(() => {
+    const unlocked = localStorage.getItem('portfolioUnlocked');
+    if (unlocked === 'true') {
+      setIsUnlocked(true);
+    }
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight / 2;
       const sections = document.querySelectorAll('section');
@@ -53,11 +65,24 @@ const PortfolioPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleUnlock = () => {
+    setIsUnlocked(true);
+    localStorage.setItem('portfolioUnlocked', 'true');
+  };
+
+  const toggleFourWins = () => {
+    setShowFourWins(!showFourWins);
+  };
+
+  if (!isUnlocked) {
+    return <AccessLock onUnlock={handleUnlock} />;
+  }
+
   return (
     <div className="bg-gradient-to-b from-gray-900 to-gray-700 text-white min-h-screen">
       <header className="fixed top-0 left-0 right-0 z-50 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-lg">
         <nav className="container mx-auto px-6 py-3">
-          <ul className="flex justify-center space-x-6">
+          <ul className="flex justify-center space-x-6 items-center">
             {['intro', 'journey', 'skills', 'projects', 'contact'].map((section) => (
               <li key={section}>
                 <a
@@ -70,6 +95,14 @@ const PortfolioPage = () => {
                 </a>
               </li>
             ))}
+            <li>
+              <button
+                onClick={toggleFourWins}
+                className="text-blue-400 hover:text-blue-300 transition duration-300"
+              >
+                4 Wins
+              </button>
+            </li>
           </ul>
         </nav>
         <LanguageSwitcher />
@@ -121,6 +154,11 @@ const PortfolioPage = () => {
               />
             ))}
           </div>
+          <div className="text-center mt-8">
+            <Link to="/projects" className="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300">
+              {t('projects.viewAll')}
+            </Link>
+          </div>
         </Section>
 
         <Section id="contact">
@@ -143,11 +181,25 @@ const PortfolioPage = () => {
           <p>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
         </div>
       </footer>
+
+      {showFourWins && (
+        <Draggable bounds="parent">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-800 p-4 rounded-lg shadow-lg cursor-move z-50" style={{ width: '300px', height: '300px' }}>
+            <button
+              onClick={toggleFourWins}
+              className="absolute top-2 right-2 text-gray-400 hover:text-white"
+            >
+              ✕
+            </button>
+            <FourWinsGame />
+          </div>
+        </Draggable>
+      )}
     </div>
   );
 };
 
-const Section = ({ id, children }) => (
+const Section: React.FC<{ id: string; children: React.ReactNode }> = ({ id, children }) => (
   <section id={id} className="py-20">
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -160,7 +212,7 @@ const Section = ({ id, children }) => (
   </section>
 );
 
-const SkillCard = ({ icon: Icon, title, skills }) => (
+const SkillCard: React.FC<{ icon: React.ComponentType; title: string; skills: string[] }> = ({ icon: Icon, title, skills }) => (
   <motion.div
     className="bg-gray-800 p-6 rounded-lg shadow-lg"
     whileHover={{ scale: 1.05 }}
@@ -176,7 +228,7 @@ const SkillCard = ({ icon: Icon, title, skills }) => (
   </motion.div>
 );
 
-const ProjectCard = ({ title, description }) => (
+const ProjectCard: React.FC<{ title: string; description: string }> = ({ title, description }) => (
   <motion.div
     className="bg-gray-800 p-6 rounded-lg shadow-lg"
     whileHover={{ scale: 1.05 }}
@@ -187,7 +239,7 @@ const ProjectCard = ({ title, description }) => (
   </motion.div>
 );
 
-const SocialIcon = ({ icon: Icon, link }) => (
+const SocialIcon: React.FC<{ icon: React.ComponentType; link: string }> = ({ icon: Icon, link }) => (
   <a href={link} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition duration-300">
     <Icon size={24} />
   </a>
