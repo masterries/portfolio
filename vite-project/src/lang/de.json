@@ -1,0 +1,123 @@
+{
+    "header": {
+     "intro": "Einleitung",
+     "journey": "Reise",
+     "skills": "Fähigkeiten",
+     "projects": "Projekte",
+     "contact": "Kontakt"
+   },
+   "intro": {
+     "name": "Patrick Ries",
+     "title": "Data Scientist & Softwareentwickler",
+     "cta": "Entdecken Sie Meine Reise"
+   },
+   "skills": {
+     "title": "Fähigkeiten & Expertise",
+     "programming": {
+       "title": "Programmierung",
+       "skills": ["SQL", "PHP", "JavaScript", "Python", "Java"]
+     },
+     "dataScience": {
+       "title": "Datenwissenschaft",
+       "skills": ["Maschinelles Lernen", "Datenanalyse", "Big Data", "Statistische Analyse"]
+     },
+     "aiDevOps": {
+       "title": "KI & DevOps",
+       "skills": ["LLM-Feinabstimmung", "CI/CD", "Docker", "Kubernetes"]
+     }
+   },
+   "projects": {
+     "title": "Ausgewählte Projekte",
+     "items": [
+       {
+         "title": "Casino-Bug-Jagd",
+         "description": "Systematische Identifizierung von Fehlern in Casino-Systemen, Erzielung einer Spieler-Rücklaufquote von über 100 %."
+       },
+       {
+         "title": "YouTube-Kanalsuche",
+         "description": "Entwicklung einer Webanwendung für die erweiterte YouTube-Kanalsuche mit fehlertoleranter Suche und umfangreichen Filteroptionen."
+       },
+       {
+         "title": "Deal-Scraper",
+         "description": "Erstellung eines Webscrapers, der Restaurantangebote verfolgt, 10 tägliche Besuche und über 1.000 Interaktionen generiert."
+       },
+       {
+         "title": "Moodle-AI-Plugin",
+         "description": "Entwicklung eines Moodle-Plugins zur automatischen Texterstellung für hochgeladene Bilder unter Verwendung lokaler oder API-basierter KI."
+       }
+     ]
+   },
+   "contact": {
+     "title": "Kontaktieren Sie Mich",
+     "description": "Ich bin immer offen für neue Möglichkeiten und Kooperationen. Zögern Sie nicht, mich zu kontaktieren!",
+     "github": "https://github.com/deingithub",
+     "linkedin": "https://linkedin.com/in/deinlinkedin",
+     "email": "mailto:deine.email@beispiel.com"
+   },
+   "footer": {
+     "copyright": "© {{year}} Patrick Ries. Alle Rechte vorbehalten."
+   },
+     "timeline": {
+       "title": "Meine Reise",
+       "achievements": "Erfolge",
+       "events": [
+         {
+           "year": "2016",
+           "title": "Beginn des Bachelorstudiums in Informatik",
+           "description": "Begann meine Reise an der Hochschule Karlsruhe",
+           "achievements": [
+             "Erlernte die Grundlagen der Programmierung",
+             "Abgeschlossenes erstes Gruppenprojekt",
+             "Beitritt zum Informatik-Club"
+           ]
+         },
+         {
+           "year": "2020",
+           "title": "Erstes Praktikum",
+           "description": "Agile-Entwicklung-Praktikant bei L-Bank",
+           "achievements": [
+             "Beitrag zu realen Softwareprojekten",
+             "Erlernte Agile-Methoden",
+             "Verbesserte Teamarbeit und Kommunikationsfähigkeiten"
+           ]
+         },
+         {
+           "year": "2022",
+           "title": "Bachelorabschluss",
+           "description": "Abschluss mit Schwerpunkt auf DevOps und Datenwissenschaft",
+           "achievements": [
+             "Abschlussarbeit über maschinelles Lernen abgeschlossen",
+             "Hoher Notendurchschnitt erreicht",
+             "Auszeichnung für herausragende Projektarbeit erhalten"
+           ]
+         },
+         {
+           "year": "2022",
+           "title": "Masterstudiengang",
+           "description": "Begann Master in Data Science an der FH Technikum Wien",
+           "achievements": [
+             "Vertiefung des Wissens in fortgeschrittenen Datenwissenschaftsthemen",
+             "Zusammenarbeit an interdisziplinären Forschungsprojekten",
+             "Erste wissenschaftliche Veröffentlichung"
+           ]
+         },
+         {
+           "year": "2023",
+           "title": "Berufliches Wachstum",
+           "description": "Beitritt zu Wiener Linien als Entwickler/Analyst",
+           "achievements": [
+             "Implementierung von Echtzeit-Datenverarbeitungssystemen",
+             "Optimierung der Datenbankleistung",
+             "Leitung des Teams bei der Einführung neuer Technologien"
+           ]
+         }
+       ]
+     },
+     "languageSwitcher": {
+       "language": "Sprache",
+       "en": "Englisch",
+       "de": "Deutsch",
+       "fr": "Französisch"
+     }
+   }
+ 

@@ -1,0 +1,122 @@
+{
+   "header": {
+    "intro": "Intro",
+    "journey": "Journey",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "intro": {
+    "name": "Patrick Ries",
+    "title": "Data Scientist & Software Developer",
+    "cta": "Discover My Journey"
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "programming": {
+      "title": "Programming",
+      "skills": ["SQL", "PHP", "JavaScript", "Python", "Java"]
+    },
+    "dataScience": {
+      "title": "Data Science",
+      "skills": ["Machine Learning", "Data Analysis", "Big Data", "Statistical Analysis"]
+    },
+    "aiDevOps": {
+      "title": "AI & DevOps",
+      "skills": ["LLM Fine-tuning", "CI/CD", "Docker", "Kubernetes"]
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "items": [
+      {
+        "title": "Casino Bug Hunting",
+        "description": "Systematically identified bugs in casino systems, achieving a Return to Player rate exceeding 100%."
+      },
+      {
+        "title": "YouTube Channel Search",
+        "description": "Developed a web application for advanced YouTube channel searching with error-tolerant search and extensive filtering options."
+      },
+      {
+        "title": "Deal Scraper",
+        "description": "Created a web scraper tracking restaurant deals, generating 10 daily visits and over 1,000 interactions."
+      },
+      {
+        "title": "Moodle AI Plugin",
+        "description": "Developed a Moodle plugin to automatically generate text for uploaded images using local or API-based AI."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "I'm always open to new opportunities and collaborations. Feel free to reach out!",
+    "github": "https://github.com/yourgithub",
+    "linkedin": "https://linkedin.com/in/yourlinkedin",
+    "email": "mailto:your.email@example.com"
+  },
+  "footer": {
+    "copyright": "© {{year}} Patrick Ries. All rights reserved."
+  },
+    "timeline": {
+      "title": "My Journey",
+      "achievements": "Achievements",
+      "events": [
+        {
+          "year": "2016",
+          "title": "Started Bachelor's in Computer Science",
+          "description": "Began my journey at Hochschule Karlsruhe",
+          "achievements": [
+            "Learned fundamentals of programming",
+            "Completed first group project",
+            "Joined computer science club"
+          ]
+        },
+        {
+          "year": "2020",
+          "title": "First Internship",
+          "description": "Agile Development Intern at L-Bank",
+          "achievements": [
+            "Contributed to real-world software projects",
+            "Learned Agile methodologies",
+            "Improved teamwork and communication skills"
+          ]
+        },
+        {
+          "year": "2022",
+          "title": "Bachelor's Degree",
+          "description": "Graduated with a focus on DevOps and Data Science",
+          "achievements": [
+            "Completed thesis on machine learning applications",
+            "Achieved high GPA",
+            "Received honors for outstanding project work"
+          ]
+        },
+        {
+          "year": "2022",
+          "title": "Master's Program",
+          "description": "Started Master's in Data Science at FH Technikum Wien",
+          "achievements": [
+            "Deepened knowledge in advanced data science topics",
+            "Collaborated on cross-disciplinary research projects",
+            "Published first academic paper"
+          ]
+        },
+        {
+          "year": "2023",
+          "title": "Professional Growth",
+          "description": "Joined Wiener Linien as a Developer/Analyst",
+          "achievements": [
+            "Implemented real-time data processing systems",
+            "Optimized database performance",
+            "Led team in adopting new technologies"
+          ]
+        }
+      ]
+    },
+    "languageSwitcher": {
+      "language": "Language",
+      "en": "English",
+      "de": "Deutsch",
+      "fr": "Français"
+    }
+  }

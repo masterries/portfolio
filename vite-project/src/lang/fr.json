@@ -1,0 +1,123 @@
+{
+    "header": {
+     "intro": "Introduction",
+     "journey": "Parcours",
+     "skills": "Compétences",
+     "projects": "Projets",
+     "contact": "Contact"
+   },
+   "intro": {
+     "name": "Patrick Ries",
+     "title": "Data Scientist & Développeur Logiciel",
+     "cta": "Découvrez Mon Parcours"
+   },
+   "skills": {
+     "title": "Compétences & Expertise",
+     "programming": {
+       "title": "Programmation",
+       "skills": ["SQL", "PHP", "JavaScript", "Python", "Java"]
+     },
+     "dataScience": {
+       "title": "Data Science",
+       "skills": ["Apprentissage Automatique", "Analyse de Données", "Big Data", "Analyse Statistique"]
+     },
+     "aiDevOps": {
+       "title": "IA & DevOps",
+       "skills": ["Affinage des Modèles LLM", "CI/CD", "Docker", "Kubernetes"]
+     }
+   },
+   "projects": {
+     "title": "Projets en Vedette",
+     "items": [
+       {
+         "title": "Chasse aux Bugs dans les Casinos",
+         "description": "Identification systématique des bugs dans les systèmes de casino, atteignant un taux de retour au joueur supérieur à 100 %."
+       },
+       {
+         "title": "Recherche de Chaîne YouTube",
+         "description": "Développement d'une application web pour la recherche avancée de chaînes YouTube avec recherche tolérante aux erreurs et options de filtrage étendues."
+       },
+       {
+         "title": "Scraper de Bons Plans",
+         "description": "Création d'un web scraper suivant les offres des restaurants, générant 10 visites quotidiennes et plus de 1 000 interactions."
+       },
+       {
+         "title": "Plugin AI pour Moodle",
+         "description": "Développement d'un plugin Moodle pour générer automatiquement du texte à partir d'images téléchargées en utilisant une IA locale ou basée sur une API."
+       }
+     ]
+   },
+   "contact": {
+     "title": "Prenez Contact",
+     "description": "Je suis toujours ouvert à de nouvelles opportunités et collaborations. N'hésitez pas à me contacter !",
+     "github": "https://github.com/votregithub",
+     "linkedin": "https://linkedin.com/in/votrelinkedin",
+     "email": "mailto:votre.email@exemple.com"
+   },
+   "footer": {
+     "copyright": "© {{year}} Patrick Ries. Tous droits réservés."
+   },
+     "timeline": {
+       "title": "Mon Parcours",
+       "achievements": "Réalisations",
+       "events": [
+         {
+           "year": "2016",
+           "title": "Début du Bachelor en Informatique",
+           "description": "Début de mon parcours à Hochschule Karlsruhe",
+           "achievements": [
+             "Acquisition des bases de la programmation",
+             "Premier projet en groupe terminé",
+             "Membre du club d'informatique"
+           ]
+         },
+         {
+           "year": "2020",
+           "title": "Premier Stage",
+           "description": "Stagiaire en Développement Agile chez L-Bank",
+           "achievements": [
+             "Contribution à des projets logiciels réels",
+             "Apprentissage des méthodologies Agiles",
+             "Amélioration des compétences en travail d'équipe et communication"
+           ]
+         },
+         {
+           "year": "2022",
+           "title": "Obtention du Bachelor",
+           "description": "Diplômé avec une spécialisation en DevOps et Data Science",
+           "achievements": [
+             "Thèse sur les applications de l'apprentissage automatique terminée",
+             "Excellente moyenne générale",
+             "Récompensé pour un projet exceptionnel"
+           ]
+         },
+         {
+           "year": "2022",
+           "title": "Programme de Master",
+           "description": "Début du Master en Data Science à la FH Technikum Wien",
+           "achievements": [
+             "Approfondissement des connaissances en science des données avancée",
+             "Collaboration sur des projets de recherche interdisciplinaires",
+             "Première publication académique"
+           ]
+         },
+         {
+           "year": "2023",
+           "title": "Croissance Professionnelle",
+           "description": "Rejoint Wiener Linien en tant que Développeur/Analyste",
+           "achievements": [
+             "Mise en œuvre de systèmes de traitement de données en temps réel",
+             "Optimisation des performances des bases de données",
+             "Leadership dans l'adoption de nouvelles technologies"
+           ]
+         }
+       ]
+     },
+     "languageSwitcher": {
+       "language": "Langue",
+       "en": "Anglais",
+       "de": "Allemand",
+       "fr": "Français"
+     }
+   }
+ 

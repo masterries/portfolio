@@ -1,0 +1,123 @@
+{
+    "header": {
+     "intro": "Aféierung",
+     "journey": "Rees",
+     "skills": "Kompetenzen",
+     "projects": "Projeten",
+     "contact": "Kontakt"
+   },
+   "intro": {
+     "name": "Patrick Ries",
+     "title": "Data Scientist & Softwareentwéckler",
+     "cta": "Entdeckt Meng Rees"
+   },
+   "skills": {
+     "title": "Kompetenzen & Expertise",
+     "programming": {
+       "title": "Programméierung",
+       "skills": ["SQL", "PHP", "JavaScript", "Python", "Java"]
+     },
+     "dataScience": {
+       "title": "Datenwëssenschaft",
+       "skills": ["Maschinelles Léieren", "Datenanalyse", "Big Data", "Statistesch Analyse"]
+     },
+     "aiDevOps": {
+       "title": "KI & DevOps",
+       "skills": ["LLM-Finanzéierung", "CI/CD", "Docker", "Kubernetes"]
+     }
+   },
+   "projects": {
+     "title": "Ausgezeechent Projeten",
+     "items": [
+       {
+         "title": "Casino Bug Hunting",
+         "description": "Systematesch Feeler an Casinosystemer identifizéiert, a méi wéi 100 % Retour op d'Spiller erreecht."
+       },
+       {
+         "title": "YouTube Kanal Sich",
+         "description": "Entwécklung vun enger Webapplikatioun fir avancéiert YouTube Kanal Sich mat fehlerresistenter Sich an extensiv Filterméiglechkeeten."
+       },
+       {
+         "title": "Deal Scraper",
+         "description": "Erstellt en Web-Scraper, deen Restaurantdeals verfollegt, 10 deeglech Visiten an iwwer 1.000 Interaktiounen generéiert."
+       },
+       {
+         "title": "Moodle AI Plugin",
+         "description": "Entwécklung vun engem Moodle Plugin fir automatesch Text fir eropgeluede Biller ze generéieren mat enger lokaler oder API-baséierter KI."
+       }
+     ]
+   },
+   "contact": {
+     "title": "Kontaktéiert Mech",
+     "description": "Ech sinn ëmmer op fir nei Méiglechkeeten a Kollaboratiounen. Zéckt net, mech ze kontaktéieren!",
+     "github": "https://github.com/äregithub",
+     "linkedin": "https://linkedin.com/in/ärelinkedin",
+     "email": "mailto:äre.email@example.com"
+   },
+   "footer": {
+     "copyright": "© {{year}} Patrick Ries. All Rechter reservéiert."
+   },
+     "timeline": {
+       "title": "Meng Rees",
+       "achievements": "Leeschtungen",
+       "events": [
+         {
+           "year": "2016",
+           "title": "Ufank vum Bachelor an der Informatik",
+           "description": "Meng Rees op der Hochschule Karlsruhe ugefaang",
+           "achievements": [
+             "Grondlage vun der Programméierung geléiert",
+             "Éischt Gruppprojet ofgeschloss",
+             "Computerwëssenschaftsclub bäigetrueden"
+           ]
+         },
+         {
+           "year": "2020",
+           "title": "Éischt Stage",
+           "description": "Agile Entwécklungsstagiär bei L-Bank",
+           "achievements": [
+             "Bäitrag zu reellen Softwareprojeten",
+             "Agile Methoden geléiert",
+             "Teamaarbecht an Kommunikatiounsfäegkeeten verbessert"
+           ]
+         },
+         {
+           "year": "2022",
+           "title": "Bachelor Ofschloss",
+           "description": "Mat engem Fokus op DevOps a Datenwëssenschaft ofgeschloss",
+           "achievements": [
+             "Ofschlossaarbecht iwwer Maschinelles Léieren gemaach",
+             "Héich GPA erreecht",
+             "Éierunge fir aussergewéinlech Projetaarbecht kritt"
+           ]
+         },
+         {
+           "year": "2022",
+           "title": "Master Programm",
+           "description": "Master an der Datenwëssenschaft op der FH Technikum Wien ugefaang",
+           "achievements": [
+             "Wëssen an avancéierten Datenwëssenschafts Themen verdéift",
+             "Zesummenaarbecht un interdisziplinäre Fuerschungsprojeten",
+             "Éischt wëssenschaftlech Publikatioun"
+           ]
+         },
+         {
+           "year": "2023",
+           "title": "Berufflechen Wuesstem",
+           "description": "Bei Wiener Linien als Entwéckler/Analyst bäigetrueden",
+           "achievements": [
+             "Realtim-Datenveraarbechtungssystemer ëmgesat",
+             "Datebankleeschtung optiméiert",
+             "Team geleet fir nei Technologien anzeféieren"
+           ]
+         }
+       ]
+     },
+     "languageSwitcher": {
+       "language": "Sprooch",
+       "en": "Englesch",
+       "de": "Däitsch",
+       "fr": "Franséisch"
+     }
+   }
+ 
