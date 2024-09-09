@@ -1,15 +1,52 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 const TimelineEvent = ({ event, index }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
   const { t } = useTranslation();
+  const controls = useAnimation();
+  const timeoutRef = useRef(null);
 
-  const flipVariants = {
-    front: { rotateY: 0 },
-    back: { rotateY: 180 }
-  };
+  const handleFlip = useCallback((flipTo) => {
+    if (isAnimating) return;
+
+    setIsAnimating(true);
+    setIsFlipped(flipTo);
+
+    controls.start({
+      rotateY: flipTo ? 180 : 0,
+      transition: { duration: 0.6 }
+    }).then(() => {
+      setIsAnimating(false);
+      // Wir drehen die Karte nicht automatisch zurück, wenn die Animation endet
+    });
+  }, [isAnimating, controls]);
+
+  const handleMouseEnter = useCallback(() => {
+    setIsHovering(true);
+    clearTimeout(timeoutRef.current);
+    if (!isAnimating && !isFlipped) {
+      handleFlip(true);
+    }
+  }, [handleFlip, isAnimating, isFlipped]);
+
+  const handleMouseLeave = useCallback(() => {
+    setIsHovering(false);
+    timeoutRef.current = setTimeout(() => {
+      if (isFlipped && !isAnimating) {
+        handleFlip(false);
+      }
+    }, 300);
+  }, [handleFlip, isFlipped, isAnimating]);
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   return (
     <motion.div
@@ -24,51 +61,24 @@ const TimelineEvent = ({ event, index }) => {
       <div 
         className={`w-5/12 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}
         style={{ perspective: '1000px' }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <motion.div
-          className="w-full h-full transition-transform duration-500 cursor-pointer"
-          animate={isHovered ? 'back' : 'front'}
-          variants={flipVariants}
+          className="w-full h-full cursor-pointer"
+          animate={controls}
           style={{ transformStyle: 'preserve-3d' }}
         >
-          <motion.div 
-            className="absolute w-full h-full backface-hidden bg-gray-800 p-4 rounded-lg"
-            initial={{ background: "rgba(59, 130, 246, 0)" }}
-            whileInView={{ background: ["rgba(59, 130, 246, 0.2)", "rgba(59, 130, 246, 0)"] }}
-            transition={{ duration: 1.5, delay: index * 0.3 }}
-          >
-            <motion.h3 
-              className="text-xl font-semibold text-blue-400"
-              initial={{ y: 20, opacity: 0, scale: 1 }}
-              whileInView={{ y: 0, opacity: 1, scale: [1, 1.1, 1] }}
-              transition={{ duration: 0.8, delay: index * 0.3 + 0.2, times: [0, 0.5, 1] }}
-            >
-              {event.year}
-            </motion.h3>
-            <motion.h4 
-              className="text-lg font-medium text-white"
-              initial={{ y: 20, opacity: 0, scale: 1 }}
-              whileInView={{ y: 0, opacity: 1, scale: [1, 1.1, 1] }}
-              transition={{ duration: 0.8, delay: index * 0.3 + 0.4, times: [0, 0.5, 1] }}
-            >
-              {t(`timeline.events.${index}.title`)}
-            </motion.h4>
-            <motion.p
-              className="text-gray-300"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: index * 0.3 + 0.6 }}
-            >
-              {t(`timeline.events.${index}.description`)}
-            </motion.p>
-          </motion.div>
-          <motion.div 
+          <div className="absolute w-full h-full backface-hidden bg-gray-800 p-4 rounded-lg">
+            <h3 className="text-xl font-semibold text-blue-400">{event.year}</h3>
+            <h4 className="text-lg font-medium text-white">{t(`timeline.events.${index}.title`)}</h4>
+            <p className="text-gray-300">{t(`timeline.events.${index}.description`)}</p>
+          </div>
+          <div 
             className="absolute w-full h-full backface-hidden bg-blue-800 p-4 rounded-lg"
             style={{ transform: 'rotateY(180deg)' }}
           >
-            <div className="transform rotate-y-180">
+            <div>
               <h4 className="text-lg font-medium mb-2 text-white">{t('timeline.achievements')}:</h4>
               <ul className="list-disc list-inside text-gray-200">
                 {event.achievements.map((achievement, i) => (
@@ -76,7 +86,7 @@ const TimelineEvent = ({ event, index }) => {
                 ))}
               </ul>
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
       <motion.div 
