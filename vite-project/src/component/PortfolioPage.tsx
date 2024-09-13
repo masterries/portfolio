@@ -5,9 +5,9 @@ import Draggable from 'react-draggable';
 import Timeline from './Timeline';
 import { useTranslation } from 'react-i18next';
 import AccessLock from './AccessLock';
-import AllProjects from './AllProjects';
+import ProjectList from './projects/ProjectList';
 import { Link } from 'react-router-dom';
-import FourWinsGame from './FourWinsGame';
+import FourWinsGame from './projects/project-4Wins/FourWinsGame';
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -95,14 +95,6 @@ const PortfolioPage: React.FC = () => {
                 </a>
               </li>
             ))}
-            <li>
-              <button
-                onClick={toggleFourWins}
-                className="text-blue-400 hover:text-blue-300 transition duration-300"
-              >
-                4 Wins
-              </button>
-            </li>
           </ul>
         </nav>
         <LanguageSwitcher />

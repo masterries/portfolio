@@ -1,51 +1,22 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Github, ExternalLink } from 'lucide-react';
-import FourWinsGame from './FourWinsGame';
-import AsteroidsGame from './AsteroidsGame';
+import projectsData from './projectsData';
 
-const ProjectDetail = () => {
-  const { id } = useParams();
+const ProjectDetail: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
   const { t } = useTranslation();
 
-  const projects = {
-    fourwins: {
-      title: '4 Wins Game',
-      description: t('projects.fourWins.description'),
-      techStack: ['React', 'TypeScript', 'Framer Motion', 'Tailwind CSS'],
-      features: [
-        t('projects.fourWins.feature1'),
-        t('projects.fourWins.feature2'),
-        t('projects.fourWins.feature3'),
-      ],
-      challenges: t('projects.fourWins.challenges'),
-      learnings: t('projects.fourWins.learnings'),
-      githubLink: 'https://github.com/yourusername/4wins-game',
-      liveLink: 'https://4wins-game.yourdomain.com',
-    },
-    asteroids: {
-      title: 'Asteroids Game',
-      description: t('projects.asteroids.description'),
-      techStack: ['React', 'TypeScript', 'Framer Motion', 'Game Development'],
-      features: [
-        t('projects.asteroids.feature1'),
-        t('projects.asteroids.feature2'),
-        t('projects.asteroids.feature3'),
-      ],
-      challenges: t('projects.asteroids.challenges'),
-      learnings: t('projects.asteroids.learnings'),
-      githubLink: 'https://github.com/yourusername/asteroids-game',
-      liveLink: 'https://asteroids-game.yourdomain.com',
-    },
-  };
-
-  const project = projects[id];
+  const project = projectsData.find(p => p.id === id);
 
   if (!project) {
-    return <div>Project not found</div>;
+    return <div>{t('projects.notFound')}</div>;
   }
+
+  const DemoComponent = lazy(() => import(`./${project.id}/${project.demoComponent.replace('.tsx', '')}`));
+
 
   return (
     <div className="bg-gradient-to-b from-gray-900 to-gray-700 text-white min-h-screen py-20">
@@ -56,21 +27,14 @@ const ProjectDetail = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl font-bold mb-8">{project.title}</h1>
-          <p className="text-xl mb-6">{project.description}</p>
+          <p className="text-xl mb-6">{t(project.description)}</p>
           
-          {id === 'fourwins' && (
-            <div className="mb-8">
-              <h2 className="text-2xl font-semibold mb-4">{t('projects.liveDemo')}</h2>
-              <FourWinsGame />
-            </div>
-          )}
-
-            {id === 'asteroids' && (
-            <div className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">{t('projects.liveDemo')}</h2>
-                <AsteroidsGame />
-            </div>
-            )}
+          <div className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">{t('projects.liveDemo')}</h2>
+            <Suspense fallback={<div>Loading...</div>}>
+              <DemoComponent />
+            </Suspense>
+          </div>
           
           <div className="mb-6">
             <h2 className="text-2xl font-semibold mb-3">{t('projects.techStack')}</h2>
@@ -87,19 +51,19 @@ const ProjectDetail = () => {
             <h2 className="text-2xl font-semibold mb-3">{t('projects.features')}</h2>
             <ul className="list-disc pl-5">
               {project.features.map((feature, index) => (
-                <li key={index} className="mb-2">{feature}</li>
+                <li key={index} className="mb-2">{t(feature)}</li>
               ))}
             </ul>
           </div>
           
           <div className="mb-6">
             <h2 className="text-2xl font-semibold mb-3">{t('projects.challenges')}</h2>
-            <p>{project.challenges}</p>
+            <p>{t(project.challenges)}</p>
           </div>
           
           <div className="mb-6">
             <h2 className="text-2xl font-semibold mb-3">{t('projects.learnings')}</h2>
-            <p>{project.learnings}</p>
+            <p>{t(project.learnings)}</p>
           </div>
           
           <div className="flex space-x-4 mb-8">

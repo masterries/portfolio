@@ -28,6 +28,23 @@
   },
   "projects": {
     "title": "Featured Projects",
+    "viewAll": "View All",
+    "backToProjects" : "Back to Projects",
+    "allProjects": "All Projects",
+    "viewProject": "View Project",
+    "backToHome": "Back to Home",
+    "notFound": "Project not found",
+    "liveDemo": "Live Demo",
+    "techStack": "Technologies Used",
+    "features": "Features",
+    "challenges": "Challenges",
+    "learnings": "What I Learned",
+    "viewOnGithub": "View on GitHub",
+    "viewLive": "View Live Project",
+    "dateFormat": {
+      "monthYear": "MMMM yyyy",
+      "dayMonth": "d MMM"
+    },
     "items": [
       {
         "title": "Casino Bug Hunting",
@@ -45,7 +62,54 @@
         "title": "Moodle AI Plugin",
         "description": "Developed a Moodle plugin to automatically generate text for uploaded images using local or API-based AI."
       }
-    ]
+    ],
+    "fractal3D": {
+      "title": "Fractal3D",
+      "description": "An interactive 3D fractal visualization tool using Three.js and WebGL",
+      "feature1": "Real-time 3D rendering of complex fractal structures",
+      "feature2": "User-controllable camera for exploring the 3D space",
+      "feature3": "Customizable fractal parameters for unique visualizations",
+      "challenges": "Optimizing performance for smooth rendering of complex 3D structures",
+      "learnings": "Deepened understanding of 3D graphics programming and WebGL optimization techniques"
+    },
+    "fractalForest": {
+      "title": "Fractal Forest",
+      "description": "A 2D fractal-based forest generator with interactive elements",
+      "feature1": "Procedural generation of diverse tree structures using fractal algorithms",
+      "feature2": "Interactive forest environment with day/night cycle",
+      "feature3": "Customizable forest density and tree types",
+      "challenges": "Balancing visual complexity with performance for larger forest scenes",
+      "learnings": "Improved skills in procedural generation and creating interactive 2D environments"
+    },    "aStarSimulation": {
+      "title": "A* Pathfinding Simulation",
+      "description": "An interactive visualization of the A* pathfinding algorithm in action",
+      "feature1": "Real-time visualization of the A* algorithm's search process",
+      "feature2": "User-configurable obstacles and start/end points",
+      "feature3": "Step-by-step playback of the pathfinding process",
+      "challenges": "Optimizing the algorithm for smooth performance on complex grids",
+      "learnings": "Gained deep insights into pathfinding algorithms and their applications in game development"
+    },
+    "asteroids": {
+      "title": "Asteroids Game",
+      "description": "A modern take on the classic Asteroids arcade game",
+      "feature1": "Smooth, physics-based spaceship controls",
+      "feature2": "Procedurally generated asteroid fields with varying difficulty",
+      "feature3": "Power-ups and special weapons to enhance gameplay",
+      "challenges": "Implementing accurate collision detection and response",
+      "learnings": "Improved skills in game physics and procedural content generation"
+    },
+    "fourWins": {
+      "title": "4 Wins Game",
+      "description": "A strategic two-player connection game with AI opponent",
+      "feature1": "Sleek, responsive game board with animated piece drops",
+      "feature2": "Intelligent AI opponent with adjustable difficulty levels",
+      "feature3": "Multiplayer mode for playing against friends",
+      "challenges": "Developing an efficient AI algorithm for competitive gameplay",
+      "learnings": "Enhanced understanding of game theory and AI decision-making processes"
+    }
+    
+
+
   },
   "contact": {
     "title": "Get In Touch",
@@ -125,4 +189,5 @@
         "submit": "Submit",
         "error": "Incorrect password. Please try again."
       }
+
   }

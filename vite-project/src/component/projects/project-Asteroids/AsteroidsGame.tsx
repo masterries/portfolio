@@ -35,7 +35,7 @@ interface Bomb {
   exploded: boolean;
 }
 
-const SpaceInvadersGame: React.FC = () => {
+const AsteroidsGame: React.FC = () => {
   const [player, setPlayer] = useState({ x: GAME_WIDTH / 2 - PLAYER_WIDTH / 2 });
   const [aliens, setAliens] = useState<Alien[]>([]);
   const [bullets, setBullets] = useState<Bullet[]>([]);
@@ -320,4 +320,4 @@ const SpaceInvadersGame: React.FC = () => {
   );
 };
 
-export default SpaceInvadersGame;
+export default AsteroidsGame;
