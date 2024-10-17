@@ -1,6 +1,6 @@
 {
-   "header": {
-    "intro": "Intro",
+  "header": {
+    "intro": "Introduction",
     "journey": "Journey",
     "skills": "Skills",
     "projects": "Projects",
@@ -9,185 +9,177 @@
   "intro": {
     "name": "Patrick Ries",
     "title": "Data Scientist & Software Developer",
-    "cta": "Discover My Journey"
+    "cta": "Explore My Journey"
   },
   "skills": {
     "title": "Skills & Expertise",
     "programming": {
       "title": "Programming",
-      "skills": ["SQL", "PHP", "JavaScript", "Python", "Java"]
+      "skills": ["TypeScript/JavaScript (ES6)", "Python", "Java", "HTML5", "CSS/SCSS", "PowerShell", "Bash/Shell", "Lua", "SQL", "PHP"]
     },
     "dataScience": {
-      "title": "Data Science",
-      "skills": ["Machine Learning", "Data Analysis", "Big Data", "Statistical Analysis"]
+      "title": "Data Science & AI",
+      "skills": ["Machine Learning", "LLM Fine-tuning", "Data Analysis", "Big Data", "Tokenization", "Sentiment Analysis", "Data Warehousing"]
     },
     "aiDevOps": {
-      "title": "AI & DevOps",
-      "skills": ["LLM Fine-tuning", "CI/CD", "Docker", "Kubernetes"]
+      "title": "DevOps & Frameworks",
+      "skills": ["Docker", "Jenkins", "Kubernetes", "CI/CD", "Git", "Angular", "React", "Spring Boot", "Django", "FastAPI"]
+    },
+    "databases": {
+      "title": "Databases",
+      "skills": ["MongoDB", "PostgreSQL", "MySQL", "Elasticsearch", "Redis", "Pinecone", "Exasol"]
+    },
+    "cloud": {
+      "title": "Cloud & Tools",
+      "skills": ["AWS", "Azure", "Cloud Cost Optimization", "Kafka", "Flink", "NiFi", "Spark", "PyTorch", "LangChain", "SAP", "SAP FDSM"]
     }
   },
   "projects": {
-    "title": "Featured Projects",
-    "viewAll": "View All",
-    "backToProjects" : "Back to Projects",
-    "allProjects": "All Projects",
-    "viewProject": "View Project",
-    "backToHome": "Back to Home",
-    "notFound": "Project not found",
-    "liveDemo": "Live Demo",
-    "techStack": "Technologies Used",
-    "features": "Features",
-    "challenges": "Challenges",
-    "learnings": "What I Learned",
-    "viewOnGithub": "View on GitHub",
-    "viewLive": "View Live Project",
-    "dateFormat": {
-      "monthYear": "MMMM yyyy",
-      "dayMonth": "d MMM"
-    },
+    "title": "Selected Projects",
     "items": [
-      {
-        "title": "Casino Bug Hunting",
-        "description": "Systematically identified bugs in casino systems, achieving a Return to Player rate exceeding 100%."
-      },
-      {
-        "title": "YouTube Channel Search",
-        "description": "Developed a web application for advanced YouTube channel searching with error-tolerant search and extensive filtering options."
-      },
-      {
-        "title": "Deal Scraper",
-        "description": "Created a web scraper tracking restaurant deals, generating 10 daily visits and over 1,000 interactions."
-      },
-      {
-        "title": "Moodle AI Plugin",
-        "description": "Developed a Moodle plugin to automatically generate text for uploaded images using local or API-based AI."
-      }
-    ],
-    "fractal3D": {
-      "title": "Fractal3D",
-      "description": "An interactive 3D fractal visualization tool using Three.js and WebGL",
-      "feature1": "Real-time 3D rendering of complex fractal structures",
-      "feature2": "User-controllable camera for exploring the 3D space",
-      "feature3": "Customizable fractal parameters for unique visualizations",
-      "challenges": "Optimizing performance for smooth rendering of complex 3D structures",
-      "learnings": "Deepened understanding of 3D graphics programming and WebGL optimization techniques"
+    {
+      "title": "Casino Bug Hunt",
+      "description": "Systematic identification of bugs in casino systems, achieving a player return rate of over 100%.",
+      "url": "https://masterries.github.io/Casino-Analyse/"
     },
-    "fractalForest": {
-      "title": "Fractal Forest",
-      "description": "A 2D fractal-based forest generator with interactive elements",
-      "feature1": "Procedural generation of diverse tree structures using fractal algorithms",
-      "feature2": "Interactive forest environment with day/night cycle",
-      "feature3": "Customizable forest density and tree types",
-      "challenges": "Balancing visual complexity with performance for larger forest scenes",
-      "learnings": "Improved skills in procedural generation and creating interactive 2D environments"
-    },    "aStarSimulation": {
-      "title": "A* Pathfinding Simulation",
-      "description": "An interactive visualization of the A* pathfinding algorithm in action",
-      "feature1": "Real-time visualization of the A* algorithm's search process",
-      "feature2": "User-configurable obstacles and start/end points",
-      "feature3": "Step-by-step playback of the pathfinding process",
-      "challenges": "Optimizing the algorithm for smooth performance on complex grids",
-      "learnings": "Gained deep insights into pathfinding algorithms and their applications in game development"
+    {
+      "title": "YouTube Channel Search",
+      "description": "Development of a web application for advanced YouTube channel search with error-tolerant search and extensive filtering options."
     },
-    "asteroids": {
-      "title": "Asteroids Game",
-      "description": "A modern take on the classic Asteroids arcade game",
-      "feature1": "Smooth, physics-based spaceship controls",
-      "feature2": "Procedurally generated asteroid fields with varying difficulty",
-      "feature3": "Power-ups and special weapons to enhance gameplay",
-      "challenges": "Implementing accurate collision detection and response",
-      "learnings": "Improved skills in game physics and procedural content generation"
+    {
+      "title": "Deal Scraper",
+      "description": "Creation of a web scraper tracking restaurant deals, generating 10 daily visits and over 1,000 interactions.",
+      "url": "https://masterries.github.io/Neotaste_Scrapper/"
     },
-    "fourWins": {
-      "title": "4 Wins Game",
-      "description": "A strategic two-player connection game with AI opponent",
-      "feature1": "Sleek, responsive game board with animated piece drops",
-      "feature2": "Intelligent AI opponent with adjustable difficulty levels",
-      "feature3": "Multiplayer mode for playing against friends",
-      "challenges": "Developing an efficient AI algorithm for competitive gameplay",
-      "learnings": "Enhanced understanding of game theory and AI decision-making processes"
+    {
+      "title": "Moodle AI Plugin",
+      "description": "Development of a Moodle plugin for automatic text generation for uploaded images using local or API-based AI."
     }
-    
-
-
+  ]
   },
   "contact": {
-    "title": "Get In Touch",
-    "description": "I'm always open to new opportunities and collaborations. Feel free to reach out!",
-    "github": "https://github.com/yourgithub",
-    "linkedin": "https://linkedin.com/in/yourlinkedin",
-    "email": "mailto:your.email@example.com"
+    "title": "Contact Me",
+    "description": "I'm always open to new opportunities and collaborations. Don't hesitate to get in touch!",
+    "github": "https://github.com/masterries",
+    "linkedin": "https://www.linkedin.com/in/ries-patrick-12492a252/",
+    "email": "mailto:me@riespatrick.de"
   },
   "footer": {
     "copyright": "© {{year}} Patrick Ries. All rights reserved."
   },
-    "timeline": {
-      "title": "My Journey",
-      "achievements": "Achievements",
-      "events": [
-        {
-          "year": "2016",
-          "title": "Started Bachelor's in Computer Science",
-          "description": "Began my journey at Hochschule Karlsruhe",
-          "achievements": [
-            "Learned fundamentals of programming",
-            "Completed first group project",
-            "Joined computer science club"
-          ]
-        },
-        {
-          "year": "2020",
-          "title": "First Internship",
-          "description": "Agile Development Intern at L-Bank",
-          "achievements": [
-            "Contributed to real-world software projects",
-            "Learned Agile methodologies",
-            "Improved teamwork and communication skills"
-          ]
-        },
-        {
-          "year": "2022",
-          "title": "Bachelor's Degree",
-          "description": "Graduated with a focus on DevOps and Data Science",
-          "achievements": [
-            "Completed thesis on machine learning applications",
-            "Achieved high GPA",
-            "Received honors for outstanding project work"
-          ]
-        },
-        {
-          "year": "2022",
-          "title": "Master's Program",
-          "description": "Started Master's in Data Science at FH Technikum Wien",
-          "achievements": [
-            "Deepened knowledge in advanced data science topics",
-            "Collaborated on cross-disciplinary research projects",
-            "Published first academic paper"
-          ]
-        },
-        {
-          "year": "2023",
-          "title": "Professional Growth",
-          "description": "Joined Wiener Linien as a Developer/Analyst",
-          "achievements": [
-            "Implemented real-time data processing systems",
-            "Optimized database performance",
-            "Led team in adopting new technologies"
-          ]
-        }
-      ]
-    },
-    "languageSwitcher": {
-      "language": "Language",
-      "en": "English",
-      "de": "Deutsch",
-      "fr": "Français"
-    },
-    "accessLock": {
-        "title": "Access Required",
-        "placeholder": "Enter password",
-        "submit": "Submit",
-        "error": "Incorrect password. Please try again."
+  "timeline": {
+    "title": "My Journey",
+    "achievements": "Achievements",
+    "events": [
+      {
+        "year": "March 2023 - Present",
+        "title": "Developer/Analyst in Diagnostics and Radio Technology",
+        "description": "Wiener Linien, Vienna",
+        "achievements": [
+          "Implementation of a database and backend system for real-time processing of train position data",
+          "Predictive maintenance",
+          "Automation of Jira processes"
+        ]
+      },
+      {
+        "year": "Oct 2022 - Present",
+        "title": "Master's Degree in Data Science",
+        "description": "FH Technikum Wien",
+        "achievements": [
+          "Deepening knowledge in advanced data science topics",
+          "Collaboration on interdisciplinary research projects",
+          "Grade point average: 1.5 (Very good)"
+        ]
+      },
+      {
+        "year": "Sept 2022 - March 2023",
+        "title": "Data Science Intern",
+        "description": "Accenture, Vienna",
+        "achievements": [
+          "Development of Exasol to SAP FDSM mappings, increasing efficiency by 40%",
+          "Development and improvement of automated data pipelines with Python"
+        ]
+      },
+      {
+        "year": "March 2022 - Sept 2022",
+        "title": "CI/CD Pipeline Developer",
+        "description": "TAKT.ing, Karlsruhe",
+        "achievements": [
+          "Design and implementation of a CI/CD pipeline",
+          "Optimization of individual developer activities",
+          "Reduction of active cloud costs by 30%"
+        ]
+      },
+      {
+        "year": "March 2021 - Feb 2022",
+        "title": "Java Developer",
+        "description": "L-Bank, Karlsruhe",
+        "achievements": [
+          "Optimization of Java products, reducing compilation time by up to 60%",
+          "Decompilation and modernization of legacy system plugins in Maven"
+        ]
+      },
+      {
+        "year": "Sept 2020 - March 2021",
+        "title": "Agile Development Intern (Java)",
+        "description": "L-Bank, Karlsruhe",
+        "achievements": [
+          "Leading the transition to a new version control system",
+          "Creation of a CI/CD pipeline"
+        ]
+      },
+      {
+        "year": "Oct 2019 - Sept 2022",
+        "title": "Bachelor of Science in Computer Science",
+        "description": "Karlsruhe University of Applied Sciences",
+        "achievements": [
+          "Graduation with focus on DevOps and Data Science",
+          "Grade point average: 2.1 (Good)",
+          "Development of software solutions and system architectures"
+        ]
+      },
+      {
+        "year": "Dec 2018 - Dec 2019",
+        "title": "Croupier",
+        "description": "Casino Baden-Baden, Baden-Baden",
+        "achievements": [
+          "Specialization in Black Jack and Poker tables",
+          "Daily handling of chips worth over €100,000"
+        ]
+      },
+      {
+        "year": "Sept 2017 - May 2019",
+        "title": "Backend Developer",
+        "description": "Diaratio, Karlsruhe",
+        "achievements": [
+          "Maintenance of website backend software (Typo3)",
+          "Technical consulting for clients",
+          "Installation and maintenance of websites"
+        ]
+      },
+      {
+        "year": "Oct 2016 - June 2019",
+        "title": "Computer Science Studies",
+        "description": "Karlsruhe Institute of Technology (KIT)",
+        "achievements": [
+          "Learned fundamentals of computer science",
+          "Gained first experiences in software development"
+        ]
+      },
+      {
+        "year": "July 2014 - July 2016",
+        "title": "High School Diploma in Computer Science",
+        "description": "Technical High School Emil Metz",
+        "achievements": [
+          "Grade point average 44/60 (Good)"
+        ]
       }
-
+    ]
+  },
+  "languageSwitcher": {
+    "language": "Language",
+    "en": "English",
+    "de": "German",
+    "fr": "French"
   }
+}

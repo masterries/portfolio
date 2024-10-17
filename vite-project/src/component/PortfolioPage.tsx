@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Github, Linkedin, Mail, Code, Database, Brain } from 'lucide-react';
+import { Github, Linkedin, Mail, Code, Database, Brain, ExternalLink } from 'lucide-react';
 import Draggable from 'react-draggable';
 import Timeline from './Timeline';
 import { useTranslation } from 'react-i18next';
-import AccessLock from './AccessLock';
+// import AccessLock from './AccessLock';
 import ProjectList from './projects/ProjectList';
 import { Link } from 'react-router-dom';
 import FourWinsGame from './projects/project-4Wins/FourWinsGame';
@@ -16,23 +16,48 @@ const LanguageSwitcher = () => {
     i18n.changeLanguage(lng);
   };
 
+  const getFlagUrl = (lang: string) => {
+    switch (lang) {
+      case 'en': return 'https://flagcdn.com/w40/gb.png';
+      case 'de': return 'https://flagcdn.com/w40/de.png';
+      case 'fr': return 'https://flagcdn.com/w40/fr.png';
+      case 'lu': return 'https://flagcdn.com/w40/lu.png';
+      default: return '';
+    }
+  };
+
   return (
-    <div className="flex justify-center space-x-2 py-2">
+    <div className="flex justify-center space-x-3 py-2">
       {['en', 'de', 'fr', 'lu'].map((lang) => (
         <button
           key={lang}
           onClick={() => changeLanguage(lang)}
-          className={`w-8 h-6 bg-cover bg-center rounded ${i18n.language === lang ? 'ring-2 ring-blue-400' : ''}`}
-          style={{ backgroundImage: `url('https://flagcdn.com/w40/${lang === 'en' ? 'gb' : lang}.png')` }}
+          className={`w-8 h-6 rounded-sm overflow-hidden transition-all duration-300 ${
+            i18n.language === lang 
+              ? 'ring-2 ring-blue-400 shadow-lg scale-110' 
+              : 'hover:scale-105'
+          }`}
+          style={{ 
+            backgroundImage: `url('${getFlagUrl(lang)}')`,
+            backgroundSize: 'contain',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundColor: 'transparent',
+            boxShadow: i18n.language === lang ? '0 0 0 2px rgba(59, 130, 246, 0.5)' : 'none'
+          }}
           aria-label={`Switch to ${lang.toUpperCase()}`}
-        />
+        >
+          <span className="sr-only">{lang.toUpperCase()}</span>
+        </button>
       ))}
     </div>
   );
 };
 
+
+
 const PortfolioPage: React.FC = () => {
-  const [isUnlocked, setIsUnlocked] = useState(false);
+  // const [isUnlocked, setIsUnlocked] = useState(false);
   const { t } = useTranslation();
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
@@ -42,10 +67,10 @@ const PortfolioPage: React.FC = () => {
   const [showFourWins, setShowFourWins] = useState(false);
 
   useEffect(() => {
-    const unlocked = localStorage.getItem('portfolioUnlocked');
-    if (unlocked === 'true') {
-      setIsUnlocked(true);
-    }
+    // const unlocked = localStorage.getItem('portfolioUnlocked');
+    // if (unlocked === 'true') {
+    //   setIsUnlocked(true);
+    // }
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight / 2;
@@ -65,18 +90,18 @@ const PortfolioPage: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleUnlock = () => {
-    setIsUnlocked(true);
-    localStorage.setItem('portfolioUnlocked', 'true');
-  };
+  // const handleUnlock = () => {
+  //   setIsUnlocked(true);
+  //   localStorage.setItem('portfolioUnlocked', 'true');
+  // };
 
   const toggleFourWins = () => {
     setShowFourWins(!showFourWins);
   };
 
-  if (!isUnlocked) {
-    return <AccessLock onUnlock={handleUnlock} />;
-  }
+  // if (!isUnlocked) {
+  //   return <AccessLock onUnlock={handleUnlock} />;
+  // }
 
   return (
     <div className="bg-gradient-to-b from-gray-900 to-gray-700 text-white min-h-screen">
@@ -129,9 +154,21 @@ const PortfolioPage: React.FC = () => {
         <Section id="skills">
           <h2 className="text-3xl font-bold mb-8 text-center">{t('skills.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <SkillCard icon={Code} title={t('skills.programming.title')} skills={t('skills.programming.skills', { returnObjects: true })} />
-            <SkillCard icon={Database} title={t('skills.dataScience.title')} skills={t('skills.dataScience.skills', { returnObjects: true })} />
-            <SkillCard icon={Brain} title={t('skills.aiDevOps.title')} skills={t('skills.aiDevOps.skills', { returnObjects: true })} />
+            <SkillCard 
+              icon={Code} 
+              title={t('skills.programming.title')} 
+              skills={t('skills.programming.skills', { returnObjects: true })} 
+            />
+            <SkillCard 
+              icon={Database} 
+              title={t('skills.dataScience.title')} 
+              skills={t('skills.dataScience.skills', { returnObjects: true })} 
+            />
+            <SkillCard 
+              icon={Brain} 
+              title={t('skills.aiDevOps.title')} 
+              skills={t('skills.aiDevOps.skills', { returnObjects: true })} 
+            />
           </div>
         </Section>
 
@@ -143,15 +180,18 @@ const PortfolioPage: React.FC = () => {
                 key={index}
                 title={project.title}
                 description={project.description}
+                url={project.url}
               />
             ))}
-          </div>
-          <div className="text-center mt-8">
+         </div>
+        <div className="text-center mt-8">
+          {/* 
             <Link to="/projects" className="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300">
               {t('projects.viewAll')}
             </Link>
-          </div>
-        </Section>
+          */}
+        </div>
+      </Section>
 
         <Section id="contact">
           <h2 className="text-3xl font-bold mb-8 text-center">{t('contact.title')}</h2>
@@ -204,29 +244,49 @@ const Section: React.FC<{ id: string; children: React.ReactNode }> = ({ id, chil
   </section>
 );
 
-const SkillCard: React.FC<{ icon: React.ComponentType; title: string; skills: string[] }> = ({ icon: Icon, title, skills }) => (
-  <motion.div
-    className="bg-gray-800 p-6 rounded-lg shadow-lg"
-    whileHover={{ scale: 1.05 }}
-    transition={{ type: 'spring', stiffness: 300 }}
-  >
-    <Icon className="w-12 h-12 mb-4 mx-auto text-blue-400" />
-    <h3 className="text-xl font-semibold mb-4 text-center">{title}</h3>
-    <ul className="list-disc pl-5">
-      {skills.map((skill, index) => (
-        <li key={index} className="mb-2">{skill}</li>
-      ))}
-    </ul>
-  </motion.div>
-);
+const SkillCard: React.FC<{ icon: React.ComponentType; title: string; skills: string[] }> = ({ icon: Icon, title, skills }) => {
+  const midpoint = Math.ceil(skills.length / 2);
+  const firstColumn = skills.slice(0, midpoint);
+  const secondColumn = skills.slice(midpoint);
 
-const ProjectCard: React.FC<{ title: string; description: string }> = ({ title, description }) => (
+  return (
+    <motion.div
+      className="bg-gray-800 p-6 rounded-lg shadow-lg"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: 'spring', stiffness: 300 }}
+    >
+      <Icon className="w-12 h-12 mb-4 mx-auto text-blue-400" />
+      <h3 className="text-xl font-semibold mb-4 text-center">{title}</h3>
+      <div className="flex justify-between">
+        <ul className="list-disc pl-5 flex-1">
+          {firstColumn.map((skill, index) => (
+            <li key={index} className="mb-2">{skill}</li>
+          ))}
+        </ul>
+        <ul className="list-disc pl-5 flex-1">
+          {secondColumn.map((skill, index) => (
+            <li key={index} className="mb-2">{skill}</li>
+          ))}
+        </ul>
+      </div>
+    </motion.div>
+  );
+};
+
+const ProjectCard: React.FC<{ title: string; description: string; url?: string }> = ({ title, description, url }) => (
   <motion.div
     className="bg-gray-800 p-6 rounded-lg shadow-lg"
     whileHover={{ scale: 1.05 }}
     transition={{ type: 'spring', stiffness: 300 }}
   >
-    <h3 className="text-xl font-semibold mb-4">{title}</h3>
+    <h3 className="text-xl font-semibold mb-4 flex items-center">
+      {title}
+      {url && (
+        <a href={url} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-400 hover:text-blue-300">
+          <ExternalLink size={18} />
+        </a>
+      )}
+    </h3>
     <p>{description}</p>
   </motion.div>
 );

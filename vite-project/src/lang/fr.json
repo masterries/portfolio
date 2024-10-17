@@ -1,123 +1,185 @@
 {
-    "header": {
-     "intro": "Introduction",
-     "journey": "Parcours",
-     "skills": "Compétences",
-     "projects": "Projets",
-     "contact": "Contact"
-   },
-   "intro": {
-     "name": "Patrick Ries",
-     "title": "Data Scientist & Développeur Logiciel",
-     "cta": "Découvrez Mon Parcours"
-   },
-   "skills": {
-     "title": "Compétences & Expertise",
-     "programming": {
-       "title": "Programmation",
-       "skills": ["SQL", "PHP", "JavaScript", "Python", "Java"]
-     },
-     "dataScience": {
-       "title": "Data Science",
-       "skills": ["Apprentissage Automatique", "Analyse de Données", "Big Data", "Analyse Statistique"]
-     },
-     "aiDevOps": {
-       "title": "IA & DevOps",
-       "skills": ["Affinage des Modèles LLM", "CI/CD", "Docker", "Kubernetes"]
-     }
-   },
-   "projects": {
-     "title": "Projets en Vedette",
-     "items": [
-       {
-         "title": "Chasse aux Bugs dans les Casinos",
-         "description": "Identification systématique des bugs dans les systèmes de casino, atteignant un taux de retour au joueur supérieur à 100 %."
-       },
-       {
-         "title": "Recherche de Chaîne YouTube",
-         "description": "Développement d'une application web pour la recherche avancée de chaînes YouTube avec recherche tolérante aux erreurs et options de filtrage étendues."
-       },
-       {
-         "title": "Scraper de Bons Plans",
-         "description": "Création d'un web scraper suivant les offres des restaurants, générant 10 visites quotidiennes et plus de 1 000 interactions."
-       },
-       {
-         "title": "Plugin AI pour Moodle",
-         "description": "Développement d'un plugin Moodle pour générer automatiquement du texte à partir d'images téléchargées en utilisant une IA locale ou basée sur une API."
-       }
-     ]
-   },
-   "contact": {
-     "title": "Prenez Contact",
-     "description": "Je suis toujours ouvert à de nouvelles opportunités et collaborations. N'hésitez pas à me contacter !",
-     "github": "https://github.com/votregithub",
-     "linkedin": "https://linkedin.com/in/votrelinkedin",
-     "email": "mailto:votre.email@exemple.com"
-   },
-   "footer": {
-     "copyright": "© {{year}} Patrick Ries. Tous droits réservés."
-   },
-     "timeline": {
-       "title": "Mon Parcours",
-       "achievements": "Réalisations",
-       "events": [
-         {
-           "year": "2016",
-           "title": "Début du Bachelor en Informatique",
-           "description": "Début de mon parcours à Hochschule Karlsruhe",
-           "achievements": [
-             "Acquisition des bases de la programmation",
-             "Premier projet en groupe terminé",
-             "Membre du club d'informatique"
-           ]
-         },
-         {
-           "year": "2020",
-           "title": "Premier Stage",
-           "description": "Stagiaire en Développement Agile chez L-Bank",
-           "achievements": [
-             "Contribution à des projets logiciels réels",
-             "Apprentissage des méthodologies Agiles",
-             "Amélioration des compétences en travail d'équipe et communication"
-           ]
-         },
-         {
-           "year": "2022",
-           "title": "Obtention du Bachelor",
-           "description": "Diplômé avec une spécialisation en DevOps et Data Science",
-           "achievements": [
-             "Thèse sur les applications de l'apprentissage automatique terminée",
-             "Excellente moyenne générale",
-             "Récompensé pour un projet exceptionnel"
-           ]
-         },
-         {
-           "year": "2022",
-           "title": "Programme de Master",
-           "description": "Début du Master en Data Science à la FH Technikum Wien",
-           "achievements": [
-             "Approfondissement des connaissances en science des données avancée",
-             "Collaboration sur des projets de recherche interdisciplinaires",
-             "Première publication académique"
-           ]
-         },
-         {
-           "year": "2023",
-           "title": "Croissance Professionnelle",
-           "description": "Rejoint Wiener Linien en tant que Développeur/Analyste",
-           "achievements": [
-             "Mise en œuvre de systèmes de traitement de données en temps réel",
-             "Optimisation des performances des bases de données",
-             "Leadership dans l'adoption de nouvelles technologies"
-           ]
-         }
-       ]
-     },
-     "languageSwitcher": {
-       "language": "Langue",
-       "en": "Anglais",
-       "de": "Allemand",
-       "fr": "Français"
-     }
-   }
- 
+  "header": {
+    "intro": "Introduction",
+    "journey": "Parcours",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "intro": {
+    "name": "Patrick Ries",
+    "title": "Data Scientist & Développeur Logiciel",
+    "cta": "Découvrez Mon Parcours"
+  },
+  "skills": {
+    "title": "Compétences & Expertise",
+    "programming": {
+      "title": "Programmation",
+      "skills": ["TypeScript/JavaScript (ES6)", "Python", "Java", "HTML5", "CSS/SCSS", "PowerShell", "Bash/Shell", "Lua", "SQL", "PHP"]
+    },
+    "dataScience": {
+      "title": "Science des Données & IA",
+      "skills": ["Apprentissage Automatique", "Ajustement de LLM", "Analyse de Données", "Big Data", "Tokenisation", "Analyse de Sentiment", "Entreposage de Données"]
+    },
+    "aiDevOps": {
+      "title": "DevOps & Frameworks",
+      "skills": ["Docker", "Jenkins", "Kubernetes", "CI/CD", "Git", "Angular", "React", "Spring Boot", "Django", "FastAPI"]
+    },
+    "databases": {
+      "title": "Bases de Données",
+      "skills": ["MongoDB", "PostgreSQL", "MySQL", "Elasticsearch", "Redis", "Pinecone", "Exasol"]
+    },
+    "cloud": {
+      "title": "Cloud & Outils",
+      "skills": ["AWS", "Azure", "Optimisation des Coûts Cloud", "Kafka", "Flink", "NiFi", "Spark", "PyTorch", "LangChain", "SAP", "SAP FDSM"]
+    }
+  },
+  "projects": {
+    "title": "Projets Sélectionnés",
+    "items": [
+    {
+      "title": "Chasse aux Bugs de Casino",
+      "description": "Identification systématique des bugs dans les systèmes de casino, obtenant un taux de retour joueur supérieur à 100%.",
+      "url": "https://masterries.github.io/Casino-Analyse/"
+    },
+    {
+      "title": "Recherche de Chaînes YouTube",
+      "description": "Développement d'une application web pour la recherche avancée de chaînes YouTube avec une recherche tolérante aux erreurs et des options de filtrage étendues."
+    },
+    {
+      "title": "Scraper de Promotions",
+      "description": "Création d'un scraper web suivant les offres de restaurants, générant 10 visites quotidiennes et plus de 1 000 interactions.",
+      "url": "https://masterries.github.io/Neotaste_Scrapper/"
+    },
+    {
+      "title": "Plugin IA pour Moodle",
+      "description": "Développement d'un plugin Moodle pour la génération automatique de texte pour les images téléchargées en utilisant une IA locale ou basée sur API."
+    }
+  ]
+  },
+  "contact": {
+    "title": "Contactez-Moi",
+    "description": "Je suis toujours ouvert à de nouvelles opportunités et collaborations. N'hésitez pas à me contacter !",
+    "github": "https://github.com/masterries",
+    "linkedin": "https://www.linkedin.com/in/ries-patrick-12492a252/",
+    "email": "mailto:me@riespatrick.de"
+  },
+  "footer": {
+    "copyright": "© {{year}} Patrick Ries. Tous droits réservés."
+  },
+  "timeline": {
+    "title": "Mon Parcours",
+    "achievements": "Réalisations",
+    "events": [
+      {
+        "year": "Mars 2023 - Présent",
+        "title": "Développeur/Analyste en Diagnostic et Technologie Radio",
+        "description": "Wiener Linien, Vienne",
+        "achievements": [
+          "Implémentation d'un système de base de données et backend pour le traitement en temps réel des données de position des trains",
+          "Maintenance prédictive",
+          "Automatisation des processus Jira"
+        ]
+      },
+      {
+        "year": "Oct 2022 - Présent",
+        "title": "Master en Science des Données",
+        "description": "FH Technikum Wien",
+        "achievements": [
+          "Approfondissement des connaissances dans les sujets avancés de la science des données",
+          "Collaboration sur des projets de recherche interdisciplinaires",
+          "Moyenne : 1,5 (Très bien)"
+        ]
+      },
+      {
+        "year": "Sept 2022 - Mars 2023",
+        "title": "Stagiaire en Science des Données",
+        "description": "Accenture, Vienne",
+        "achievements": [
+          "Développement de mappings Exasol vers SAP FDSM, augmentant l'efficacité de 40%",
+          "Développement et amélioration de pipelines de données automatisés avec Python"
+        ]
+      },
+      {
+        "year": "Mars 2022 - Sept 2022",
+        "title": "Développeur de Pipeline CI/CD",
+        "description": "TAKT.ing, Karlsruhe",
+        "achievements": [
+          "Conception et implémentation d'un pipeline CI/CD",
+          "Optimisation des activités de développement individuel",
+          "Réduction des coûts cloud actifs de 30%"
+        ]
+      },
+      {
+        "year": "Mars 2021 - Fév 2022",
+        "title": "Développeur Java",
+        "description": "L-Bank, Karlsruhe",
+        "achievements": [
+          "Optimisation des produits Java, réduisant le temps de compilation jusqu'à 60%",
+          "Décompilation et modernisation des plugins de systèmes hérités en Maven"
+        ]
+      },
+      {
+        "year": "Sept 2020 - Mars 2021",
+        "title": "Stagiaire en Développement Agile (Java)",
+        "description": "L-Bank, Karlsruhe",
+        "achievements": [
+          "Direction de la transition vers un nouveau système de contrôle de version",
+          "Création d'un pipeline CI/CD"
+        ]
+      },
+      {
+        "year": "Oct 2019 - Sept 2022",
+        "title": "Licence en Informatique",
+        "description": "Université des Sciences Appliquées de Karlsruhe",
+        "achievements": [
+          "Diplôme avec spécialisation en DevOps et Science des Données",
+          "Moyenne : 2,1 (Bien)",
+          "Développement de solutions logicielles et d'architectures système"
+        ]
+      },
+      {
+        "year": "Déc 2018 - Déc 2019",
+        "title": "Croupier",
+        "description": "Casino Baden-Baden, Baden-Baden",
+        "achievements": [
+          "Spécialisation dans les tables de Black Jack et de Poker",
+          "Manipulation quotidienne de jetons d'une valeur de plus de 100 000 €"
+        ]
+      },
+      {
+        "year": "Sept 2017 - Mai 2019",
+        "title": "Développeur Backend",
+        "description": "Diaratio, Karlsruhe",
+        "achievements": [
+          "Maintenance du logiciel backend de site web (Typo3)",
+          "Conseil technique pour les clients",
+          "Installation et maintenance de sites web"
+        ]
+      },
+      {
+        "year": "Oct 2016 - Juin 2019",
+        "title": "Études en Informatique",
+        "description": "Institut de Technologie de Karlsruhe (KIT)",
+        "achievements": [
+          "Apprentissage des fondamentaux de l'informatique",
+          "Acquisition des premières expériences en développement logiciel"
+        ]
+      },
+      {
+        "year": "Juillet 2014 - Juillet 2016",
+        "title": "Baccalauréat en Informatique",
+        "description": "Lycée Technique Emil Metz",
+        "achievements": [
+          "Moyenne de 44/60 (Bien)"
+        ]
+      }
+    ]
+  },
+  "languageSwitcher": {
+    "language": "Langue",
+    "en": "Anglais",
+    "de": "Allemand",
+    "fr": "Français"
+  }
+}

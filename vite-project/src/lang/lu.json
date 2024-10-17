@@ -1,123 +1,186 @@
 {
-    "header": {
-     "intro": "Aféierung",
-     "journey": "Rees",
-     "skills": "Kompetenzen",
-     "projects": "Projeten",
-     "contact": "Kontakt"
-   },
-   "intro": {
-     "name": "Patrick Ries",
-     "title": "Data Scientist & Softwareentwéckler",
-     "cta": "Entdeckt Meng Rees"
-   },
-   "skills": {
-     "title": "Kompetenzen & Expertise",
-     "programming": {
-       "title": "Programméierung",
-       "skills": ["SQL", "PHP", "JavaScript", "Python", "Java"]
-     },
-     "dataScience": {
-       "title": "Datenwëssenschaft",
-       "skills": ["Maschinelles Léieren", "Datenanalyse", "Big Data", "Statistesch Analyse"]
-     },
-     "aiDevOps": {
-       "title": "KI & DevOps",
-       "skills": ["LLM-Finanzéierung", "CI/CD", "Docker", "Kubernetes"]
-     }
-   },
-   "projects": {
-     "title": "Ausgezeechent Projeten",
-     "items": [
-       {
-         "title": "Casino Bug Hunting",
-         "description": "Systematesch Feeler an Casinosystemer identifizéiert, a méi wéi 100 % Retour op d'Spiller erreecht."
-       },
-       {
-         "title": "YouTube Kanal Sich",
-         "description": "Entwécklung vun enger Webapplikatioun fir avancéiert YouTube Kanal Sich mat fehlerresistenter Sich an extensiv Filterméiglechkeeten."
-       },
-       {
-         "title": "Deal Scraper",
-         "description": "Erstellt en Web-Scraper, deen Restaurantdeals verfollegt, 10 deeglech Visiten an iwwer 1.000 Interaktiounen generéiert."
-       },
-       {
-         "title": "Moodle AI Plugin",
-         "description": "Entwécklung vun engem Moodle Plugin fir automatesch Text fir eropgeluede Biller ze generéieren mat enger lokaler oder API-baséierter KI."
-       }
-     ]
-   },
-   "contact": {
-     "title": "Kontaktéiert Mech",
-     "description": "Ech sinn ëmmer op fir nei Méiglechkeeten a Kollaboratiounen. Zéckt net, mech ze kontaktéieren!",
-     "github": "https://github.com/äregithub",
-     "linkedin": "https://linkedin.com/in/ärelinkedin",
-     "email": "mailto:äre.email@example.com"
-   },
-   "footer": {
-     "copyright": "© {{year}} Patrick Ries. All Rechter reservéiert."
-   },
-     "timeline": {
-       "title": "Meng Rees",
-       "achievements": "Leeschtungen",
-       "events": [
-         {
-           "year": "2016",
-           "title": "Ufank vum Bachelor an der Informatik",
-           "description": "Meng Rees op der Hochschule Karlsruhe ugefaang",
-           "achievements": [
-             "Grondlage vun der Programméierung geléiert",
-             "Éischt Gruppprojet ofgeschloss",
-             "Computerwëssenschaftsclub bäigetrueden"
-           ]
-         },
-         {
-           "year": "2020",
-           "title": "Éischt Stage",
-           "description": "Agile Entwécklungsstagiär bei L-Bank",
-           "achievements": [
-             "Bäitrag zu reellen Softwareprojeten",
-             "Agile Methoden geléiert",
-             "Teamaarbecht an Kommunikatiounsfäegkeeten verbessert"
-           ]
-         },
-         {
-           "year": "2022",
-           "title": "Bachelor Ofschloss",
-           "description": "Mat engem Fokus op DevOps a Datenwëssenschaft ofgeschloss",
-           "achievements": [
-             "Ofschlossaarbecht iwwer Maschinelles Léieren gemaach",
-             "Héich GPA erreecht",
-             "Éierunge fir aussergewéinlech Projetaarbecht kritt"
-           ]
-         },
-         {
-           "year": "2022",
-           "title": "Master Programm",
-           "description": "Master an der Datenwëssenschaft op der FH Technikum Wien ugefaang",
-           "achievements": [
-             "Wëssen an avancéierten Datenwëssenschafts Themen verdéift",
-             "Zesummenaarbecht un interdisziplinäre Fuerschungsprojeten",
-             "Éischt wëssenschaftlech Publikatioun"
-           ]
-         },
-         {
-           "year": "2023",
-           "title": "Berufflechen Wuesstem",
-           "description": "Bei Wiener Linien als Entwéckler/Analyst bäigetrueden",
-           "achievements": [
-             "Realtim-Datenveraarbechtungssystemer ëmgesat",
-             "Datebankleeschtung optiméiert",
-             "Team geleet fir nei Technologien anzeféieren"
-           ]
-         }
-       ]
-     },
-     "languageSwitcher": {
-       "language": "Sprooch",
-       "en": "Englesch",
-       "de": "Däitsch",
-       "fr": "Franséisch"
-     }
-   }
- 
+  "header": {
+    "intro": "Aféierung",
+    "journey": "Mäi Wee",
+    "skills": "Fäegkeeten",
+    "projects": "Projekter",
+    "contact": "Kontakt"
+  },
+  "intro": {
+    "name": "Patrick Ries",
+    "title": "Data Scientist & Software Entwéckler",
+    "cta": "Entdeckt Mäi Wee"
+  },
+  "skills": {
+    "title": "Fäegkeeten & Expertise",
+    "programming": {
+      "title": "Programméierung",
+      "skills": ["TypeScript/JavaScript (ES6)", "Python", "Java", "HTML5", "CSS/SCSS", "PowerShell", "Bash/Shell", "Lua", "SQL", "PHP"]
+    },
+    "dataScience": {
+      "title": "Data Science & KI",
+      "skills": ["Maschinellt Léieren", "LLM Fine-tuning", "Dateanalyse", "Big Data", "Tokenizéierung", "Stëmmungsanalyse", "Data Warehousing"]
+    },
+    "aiDevOps": {
+      "title": "DevOps & Frameworks",
+      "skills": ["Docker", "Jenkins", "Kubernetes", "CI/CD", "Git", "Angular", "React", "Spring Boot", "Django", "FastAPI"]
+    },
+    "databases": {
+      "title": "Datebanken",
+      "skills": ["MongoDB", "PostgreSQL", "MySQL", "Elasticsearch", "Redis", "Pinecone", "Exasol"]
+    },
+    "cloud": {
+      "title": "Cloud & Tools",
+      "skills": ["AWS", "Azure", "Cloud Käschtenoptimizéierung", "Kafka", "Flink", "NiFi", "Spark", "PyTorch", "LangChain", "SAP", "SAP FDSM"]
+    }
+  },
+  "projects": {
+    "title": "Ausgewielte Projekter",
+    "items": [
+    {
+      "title": "Casino Bug Juegd",
+      "description": "Systematesch Identifizéierung vu Feeler a Casino Systemer, mat enger Spillerrenditt vun iwwer 100%.",
+      "url": "https://masterries.github.io/Casino-Analyse/"
+    },
+    {
+      "title": "YouTube Kanalsich",
+      "description": "Entwécklung vun enger Webapplikatioun fir erweidert YouTube Kanalsich mat feelertolerant Sich an ëmfaassende Filteroptiounen."
+    },
+    {
+      "title": "Deal Scraper",
+      "description": "Kreatioun vun engem Webscraper fir Restaurantofferen ze verfollegen, generéiert 10 däglech Visiten an iwwer 1.000 Interaktiounen.",
+      "url": "https://masterries.github.io/Neotaste_Scrapper/"
+    },
+    {
+      "title": "Moodle KI Plugin",
+      "description": "Entwécklung vun engem Moodle Plugin fir automatesch Textgeneréierung fir eropgelueden Biller mat lokaler oder API-baséierter KI."
+    }
+  ]
+  },
+  "contact": {
+    "title": "Kontaktéiert Mech",
+    "description": "Ech si ëmmer op fir nei Méiglechkeeten a Kollaboratiounen. Zéckt net, mech ze kontaktéieren!",
+    "github": "https://github.com/masterries",
+    "linkedin": "https://www.linkedin.com/in/ries-patrick-12492a252/",
+    "email": "mailto:me@riespatrick.de"
+  },
+  "footer": {
+    "copyright": "© {{year}} Patrick Ries. All Rechter virbehalen."
+  },
+  "timeline": {
+    "title": "Mäi Wee",
+    "achievements": "Erreechtungen",
+    "events": [
+      {
+        "year": "Mäerz 2023 - Haut",
+        "title": "Entwéckler/Analyst an Diagnostik an Funktechnik",
+        "description": "Wiener Linien, Wien",
+        "achievements": [
+          "Ëmsetzung vun engem Datebank- a Backend-System fir Echtzäitveraarbechtung vun Zugpositiounsdaten",
+          "Predictive Maintenance",
+          "Automatiséierung vu Jira Prozesser"
+        ]
+      },
+      {
+        "year": "Oktober 2022 - Haut",
+        "title": "Master an Data Science",
+        "description": "FH Technikum Wien",
+        "achievements": [
+          "Verdéiwung vum Wëssen an fortgeschrattenen Data Science Themen",
+          "Zesummenaarbecht un interdisziplinäre Fuerschungsprojet",
+          "Notenduerschnëtt: 1,5 (Ganz gutt)"
+        ]
+      },
+      {
+        "year": "September 2022 - Mäerz 2023",
+        "title": "Data Science Praktikant",
+        "description": "Accenture, Wien",
+        "achievements": [
+          "Entwécklung vun Exasol zu SAP FDSM Zouuerdnungen, Effizienzsteigerung ëm 40%",
+          "Entwécklung a Verbesserung vun automatiséierten Datepipelines mat Python"
+        ]
+      },
+      {
+        "year": "Mäerz 2022 - September 2022",
+        "title": "CI/CD Pipeline Entwéckler",
+        "description": "TAKT.ing, Karlsruhe",
+        "achievements": [
+          "Design an Ëmsetzung vun enger CI/CD Pipeline",
+          "Optimiséierung vun Eenzelentwéckleraktivitéiten",
+          "Reduktioun vun aktive Cloud Käschten ëm 30%"
+        ]
+      },
+      {
+        "year": "Mäerz 2021 - Februar 2022",
+        "title": "Java Entwéckler",
+        "description": "L-Bank, Karlsruhe",
+        "achievements": [
+          "Optimiséierung vu Java Produkter, Reduktioun vun der Kompilatiounszäit ëm bis zu 60%",
+          "Dekompilatioun a Moderniséierung vun Altsystem-Plugins a Maven"
+        ]
+      },
+      {
+        "year": "September 2020 - Mäerz 2021",
+        "title": "Agile Entwécklung Praktikant (Java)",
+        "description": "L-Bank, Karlsruhe",
+        "achievements": [
+          "Leedung vum Iwwergang zu engem neie Versiounskontrollsystem",
+          "Erstallung vun enger CI/CD Pipeline"
+        ]
+      },
+      {
+        "year": "Oktober 2019 - September 2022",
+        "title": "Bachelor of Science an der Informatik",
+        "description": "Héichschoul Karlsruhe",
+        "achievements": [
+          "Ofschloss mat Schwéierpunkt op DevOps an Data Science",
+          "Notenduerschnëtt: 2,1 (Gutt)",
+          "Entwécklung vu Softwareléisungen a Systemarchitekturen"
+        ]
+      },
+      {
+        "year": "Dezember 2018 - Dezember 2019",
+        "title": "Croupier",
+        "description": "Casino Baden-Baden, Baden-Baden",
+        "achievements": [
+          "Spezialiséierung op Black Jack a Poker Dëscher",
+          "Deeglech Ëmgang mat Jetons am Wäert vun iwwer 100.000 €"
+        ]
+      },
+      {
+        "year": "September 2017 - Mee 2019",
+        "title": "Backend Entwéckler",
+        "description": "Diaratio, Karlsruhe",
+        "achievements": [
+          "Maintenance vun der Website-Backend-Software (Typo3)",
+          "Technesch Berodung fir Clienten",
+          "Installatioun a Maintenance vu Websiten"
+        ]
+      },
+      {
+        "year": "Oktober 2016 - Juni 2019",
+        "title": "Informatikstudie",
+        "description": "Karlsruher Institut fir Technologie (KIT)",
+        "achievements": [
+          "Grondlagen vun der Informatik geléiert",
+          "Éischt Erfarungen an der Softwareentwécklung gesammelt"
+        ]
+      },
+      {
+        "year": "Juli 2014 - Juli 2016",
+        "title": "Première an der Informatik",
+        "description": "Technescht Lycée Emil Metz",
+        "achievements": [
+          "Notenduerschnëtt 44/60 (Gutt)"
+        ]
+      }
+    ]
+  },
+  "languageSwitcher": {
+    "language": "Sprooch",
+    "en": "Englesch",
+    "de": "Däitsch",
+    "fr": "Franséisch",
+    "lu": "Lëtzebuergesch"
+  }
+}
